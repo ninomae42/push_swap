@@ -47,4 +47,7 @@ fclean: clean
 
 re: fclean all
 
+bear:
+	bear -- make
+
 .PHONY: all clean fclean re libft
