@@ -1,9 +1,11 @@
 NAME := push_swap
 SRCDIR := ./srcs/
-SRCS := operation.c \
-		operation2.c \
+SRCS := push.c \
+		reverse_rotate.c \
+		rotate.c \
 		stack.c \
 		stack_utils.c \
+		swap.c \
 
 SRCS := $(addprefix $(SRCDIR), $(SRCS))
 OBJS := $(SRCS:.c=.o)
@@ -20,7 +22,7 @@ LIBS := libft.a
 RM := rm -f
 
 .c.o:
-	$(CC) $(CFLAGS) -I $(INCDIR) -c $< -o $(<:.c=.o)
+	$(CC) $(CFLAGS) -I $(INCDIR) -I $(INCDIR_LIBFT) -c $< -o $(<:.c=.o)
 
 $(NAME): libft.a $(OBJS) $(MAIN)
 	$(CC) $(CFLAGS) -I $(INCDIR) -I $(INCDIR_LIBFT) $(LIBS) -o $(NAME) $(OBJS) $(MAIN)

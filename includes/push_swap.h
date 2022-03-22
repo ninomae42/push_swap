@@ -22,15 +22,23 @@ size_t	stack_cnt(t_stack *root);
 t_stack	*stack_last(t_stack *root);
 t_stack	*stack_last_before_one(t_stack *root);
 
-/* operation.c */
-void	swap(t_stack **root);
+/* swap.c */
+void	swap_a(t_stack **stack_a);
+void	swap_b(t_stack **stack_b);
 void	swap_sametime(t_stack **stack_a, t_stack **stack_b);
-void	rotate(t_stack **root);
+
+/* push.c */
+void	push_a(t_stack **stack_a, t_stack **stack_b);
+void	push_b(t_stack **stack_a, t_stack **stack_b);
+
+/* rotate.c */
+void	rotate_a(t_stack **stack_a);
+void	rotate_b(t_stack **stack_b);
 void	rotate_sametime(t_stack **stack_a, t_stack **stack_b);
 
-/* operation2.c */
-void	push(t_stack **stack1, t_stack **stack2);
-void	reverse_rotate(t_stack **root);
+/* reverse_rotate.c */
+void	reverse_rotate_a(t_stack **stack_a);
+void	reverse_rotate_b(t_stack **stack_b);
 void	reverse_rotate_sametime(t_stack **stack_a, t_stack **stack_b);
 
 #endif
