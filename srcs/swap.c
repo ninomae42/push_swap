@@ -6,7 +6,7 @@ static void	swap(t_stack **root)
 	t_stack	*tmp;
 	t_stack	*tmp_next;
 
-	if (stack_cnt(*root) < 2)
+	if (root == NULL || stack_cnt(*root) < 2)
 		return ;
 	tmp = *root;
 	*root = (*root)->next;

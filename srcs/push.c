@@ -5,7 +5,7 @@ static void	push(t_stack **stack1, t_stack **stack2)
 {
 	int		pop_data;
 
-	if (is_empty(*stack2))
+	if (stack1 == NULL || stack2 == NULL || is_empty(*stack2))
 		return ;
 	pop_data = pop(stack2);
 	add_element(stack1, pop_data);

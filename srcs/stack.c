@@ -23,6 +23,8 @@ void	add_element(t_stack **root, int data)
 {
 	t_stack	*node_new;
 
+	if (root == NULL)
+		return ;
 	node_new = new_node(data);
 	if (node_new == NULL)
 		return ;
@@ -36,7 +38,7 @@ int	pop(t_stack **root)
 	t_stack	*tmp;
 	int		pop_data;
 
-	if (is_empty(*root))
+	if (root == NULL || is_empty(*root))
 		return (INT_MIN);
 	tmp = *root;
 	*root = (*root)->next;

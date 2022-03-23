@@ -6,6 +6,8 @@ static void	reverse_rotate(t_stack **root)
 	t_stack	*last;
 	t_stack	*last_before_one;
 
+	if (root == NULL || stack_cnt(*root) < 2)
+		return ;
 	last = stack_last(*root);
 	last_before_one = stack_last_before_one(*root);
 	last_before_one->next = NULL;

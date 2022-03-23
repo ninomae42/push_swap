@@ -6,10 +6,12 @@ static void	rotate(t_stack **root)
 	t_stack	*top;
 	t_stack	*last;
 
+	if (root == NULL || stack_cnt(*root) < 2)
+		return ;
 	top = *root;
+	top->next = NULL;
 	*root = (*root)->next;
 	last = stack_last(*root);
-	top->next = NULL;
 	last->next = top;
 }
 
