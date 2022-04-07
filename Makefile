@@ -11,28 +11,28 @@ SRCS := $(addprefix $(SRCDIR), $(SRCS))
 OBJS := $(SRCS:.c=.o)
 
 MAIN := push_swap.c
-MAIN := $(addprefix $(SRCDIR), $(MAIN));
+MAIN := $(addprefix $(SRCDIR), $(MAIN))
 
 CC := cc
 CFLAGS := -Wall -Wextra -Werror
 MAKE := make
-INCDIR := ./includes/
-INCDIR_LIBFT := ./libft/includes/
+INCDIR := -I ./includes/
+INCDIR_LIBFT := -I ./libft/includes/
 LIBS := libft.a
 RM := rm -f
 
 .c.o:
-	$(CC) $(CFLAGS) -I $(INCDIR) -I $(INCDIR_LIBFT) -c $< -o $(<:.c=.o)
+	$(CC) $(CFLAGS) $(INCDIR) $(INCDIR_LIBFT) -c $< -o $(<:.c=.o)
 
 $(NAME): libft.a $(OBJS) $(MAIN)
-	$(CC) $(CFLAGS) -I $(INCDIR) -I $(INCDIR_LIBFT) $(LIBS) -o $(NAME) $(OBJS) $(MAIN)
+	$(CC) $(CFLAGS) $(INCDIR) $(INCDIR_LIBFT) $(OBJS) $(MAIN) $(LIBS) -o $(NAME) 
 
 # $(OBJS): $(SRCS)
 # 	$(CC) $(CFLAGS) -I $(INCDIR) $(LIBS) -c $< -o $(<:.c=.o)
 
 libft.a:
 	$(MAKE) -C ./libft
-	cp libft/libft.a .
+	mv libft/libft.a .
 
 all: $(NAME)
 
