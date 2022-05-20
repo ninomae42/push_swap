@@ -15,10 +15,17 @@ typedef struct s_stack {
 	size_t			size;
 }	t_stack;
 
+// stack_main.c
 t_stack			*create_stack(void);
 void			push_stack(t_stack *stack, int value);
 int				pop_stack(t_stack *stack);
 void			print_stack(t_stack *stack);
 t_stack_node	*stack_last(t_stack *stack);
+
+// operation_base.c
+void			swap(t_stack *stack);
+void			push(t_stack *stack1, t_stack *stack2);
+void			rotate(t_stack *stack);
+void			reverse_rotate(t_stack *stack);
 
 #endif
