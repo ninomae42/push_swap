@@ -28,6 +28,13 @@ t_stack_node	*stack_last(t_stack *stack);
 // stack_utils.c
 t_stack_node	*find_node(t_stack *stack, int key);
 
+
+// sort_main.c
+void	do_sort(t_stack *stack_a, t_stack *stack_b);
+
+// sort_utils.c
+bool			is_stack_sorted(t_stack *stack);
+
 // operation_base.c
 void			swap(t_stack *stack);
 void			push(t_stack *stack1, t_stack *stack2);

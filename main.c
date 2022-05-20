@@ -9,9 +9,6 @@ int	main(int argc, char *argv[])
 	stack_b = create_stack();
 
 	setup_stack(argc, argv, stack_a);
-
-	print_stack(stack_a);
-	print_stack(stack_b);
-
+	do_sort(stack_a, stack_b);
 	exit(EXIT_SUCCESS);
 }
