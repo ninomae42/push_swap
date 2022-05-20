@@ -16,5 +16,9 @@ typedef struct s_stack {
 }	t_stack;
 
 t_stack			*create_stack(void);
+void			push_stack(t_stack *stack, int value);
+int				pop_stack(t_stack *stack);
+void			print_stack(t_stack *stack);
+t_stack_node 	*stack_last(t_stack *stack);
 
 #endif
