@@ -1,6 +1,7 @@
 #include "push_swap.h"
 
-// create stack instance. If allocation fails, then exit with status(EXIT_FAILURE)
+/*	create stack instance. If allocation fails,
+	then exit with status(EXIT_FAILURE) */
 t_stack	*create_stack(void)
 {
 	t_stack	*stack_new;
@@ -13,7 +14,8 @@ t_stack	*create_stack(void)
 	return (stack_new);
 }
 
-// push the element to the stack. If allocation fails, then exit with status(EXIT_FAILURE)
+/*	push the element to the stack. If allocation fails,
+	then exit with status(EXIT_FAILURE)*/
 void	push_stack(t_stack *stack, int value)
 {
 	t_stack_node	*new_node;
@@ -30,7 +32,7 @@ void	push_stack(t_stack *stack, int value)
 	stack->size += 1;
 }
 
-// pop stack top value from a stack. Also frees the stack top element.
+//	pop stack top value from a stack. Also frees the stack top element.
 int	pop_stack(t_stack *stack)
 {
 	t_stack_node	*head;
@@ -43,7 +45,6 @@ int	pop_stack(t_stack *stack)
 		head_next = head->next;
 		ret = head->data;
 		free(head);
-
 		if (head_next != NULL)
 			head_next->prev = NULL;
 		head = head_next;
@@ -54,7 +55,8 @@ int	pop_stack(t_stack *stack)
 }
 
 /*	prints stack general information(pointer of head, size of stack) and
-	information of each node(value, prev pointer, current pointer, next pointer)*/
+	information of each node(value, prev pointer, current pointer,
+	next pointer)*/
 void	print_stack(t_stack *stack)
 {
 	t_stack_node	*current;
@@ -63,13 +65,14 @@ void	print_stack(t_stack *stack)
 	current = stack->head;
 	while (current != NULL)
 	{
-		printf("data: %d, prev: %p, current: %p, next: %p\n", current->data, current->prev, current, current->next);
+		printf("data: %d, prev: %p, current: %p, next: %p\n",
+			current->data, current->prev, current, current->next);
 		current = current->next;
 	}
 }
 
-// Find the last node of the stack.
-t_stack_node *stack_last(t_stack *stack)
+//	Find the last node of the stack.
+t_stack_node	*stack_last(t_stack *stack)
 {
 	t_stack_node	*current;
 
