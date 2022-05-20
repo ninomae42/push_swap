@@ -11,16 +11,23 @@ int	main(int argc, char *argv[])
 	push_stack(stack1, 1);
 	push_stack(stack1, 2);
 	push_stack(stack1, 3);
+	push_stack(stack2, -1);
 	print_stack(stack1);
 	print_stack(stack2);
 
-	puts("push from stack1 to stack2");
-	push(stack2, stack1);
+	push_b(stack1, stack2);
 	print_stack(stack1);
 	print_stack(stack2);
 
-	puts("push from stack2 to stack1");
-	push(stack1, stack2);
+	reverse_rotate_same(stack1, stack2);
+	print_stack(stack1);
+	print_stack(stack2);
+
+	push_a(stack1, stack2);
+	print_stack(stack1);
+	print_stack(stack2);
+
+	push_a(stack1, stack2);
 	print_stack(stack1);
 	print_stack(stack2);
 

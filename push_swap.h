@@ -49,6 +49,6 @@ void			reverse_rotate_same(t_stack *stack_a, t_stack *stack_b);
 
 // ft_putstr_fd.c
 size_t			ft_strlen(const char *s);
-void			ft_putstr(const char *s, int fd);
+void			ft_putstr_fd(const char *s, int fd);
 
 #endif

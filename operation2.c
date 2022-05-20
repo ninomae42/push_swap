@@ -5,7 +5,7 @@
 void	rotate_a(t_stack *stack_a)
 {
 	rotate(stack_a);
-	ft_putstr("ra\n", STDOUT_FILENO);
+	ft_putstr_fd("ra\n", STDOUT_FILENO);
 }
 
 /*	Shift up all elements of stack 'b' by 1.
@@ -13,7 +13,7 @@ void	rotate_a(t_stack *stack_a)
 void	rotate_b(t_stack *stack_b)
 {
 	rotate(stack_b);
-	ft_putstr("rb\n", STDOUT_FILENO);
+	ft_putstr_fd("rb\n", STDOUT_FILENO);
 }
 
 /*	rotate_a and rotate_b at the sametime. */
@@ -21,5 +21,5 @@ void	rotate_sametime(t_stack *stack_a, t_stack *stack_b)
 {
 	rotate(stack_a);
 	rotate(stack_b);
-	ft_putstr("rr\n", STDOUT_FILENO);
+	ft_putstr_fd("rr\n", STDOUT_FILENO);
 }

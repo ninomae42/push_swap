@@ -5,7 +5,7 @@
 void	swap_a(t_stack *stack_a)
 {
 	swap(stack_a);
-	ft_putstr("sa\n", STDOUT_FILENO);
+	ft_putstr_fd("sa\n", STDOUT_FILENO);
 }
 
 /*	Swap the first 2 elements at the top of stack 'b'.
@@ -13,7 +13,7 @@ void	swap_a(t_stack *stack_a)
 void	swap_b(t_stack *stack_b)
 {
 	swap(stack_b);
-	ft_putstr("sb\n", STDOUT_FILENO);
+	ft_putstr_fd("sb\n", STDOUT_FILENO);
 }
 
 /*	'swap_a' and 'swap_b' at the same time. */
@@ -21,7 +21,7 @@ void	swap_sametime(t_stack *stack_a, t_stack *stack_b)
 {
 	swap(stack_a);
 	swap(stack_b);
-	ft_putstr("ss\n", STDOUT_FILENO);
+	ft_putstr_fd("ss\n", STDOUT_FILENO);
 }
 
 /*	Take the first element at the top of stack_b
@@ -30,7 +30,7 @@ void	swap_sametime(t_stack *stack_a, t_stack *stack_b)
 void	push_a(t_stack *stack_a, t_stack *stack_b)
 {
 	push(stack_a, stack_b);
-	ft_putstr("pa\n", STDOUT_FILENO);
+	ft_putstr_fd("pa\n", STDOUT_FILENO);
 }
 
 /*	Take the first element at the top of stack_a
@@ -39,5 +39,5 @@ void	push_a(t_stack *stack_a, t_stack *stack_b)
 void	push_b(t_stack *stack_a, t_stack *stack_b)
 {
 	push(stack_b, stack_a);
-	ft_putstr("pb\n", STDOUT_FILENO);
+	ft_putstr_fd("pb\n", STDOUT_FILENO);
 }
