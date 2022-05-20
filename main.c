@@ -2,34 +2,16 @@
 
 int	main(int argc, char *argv[])
 {
-	t_stack	*stack1;
-	t_stack	*stack2;
+	t_stack	*stack_a;
+	t_stack	*stack_b;
 
-	stack1 = create_stack();
-	stack2 = create_stack();
+	stack_a = create_stack();
+	stack_b = create_stack();
 
-	push_stack(stack1, 1);
-	push_stack(stack1, 2);
-	push_stack(stack1, 3);
-	push_stack(stack2, -1);
-	print_stack(stack1);
-	print_stack(stack2);
+	setup_stack(argc, argv, stack_a);
 
-	push_b(stack1, stack2);
-	print_stack(stack1);
-	print_stack(stack2);
-
-	reverse_rotate_same(stack1, stack2);
-	print_stack(stack1);
-	print_stack(stack2);
-
-	push_a(stack1, stack2);
-	print_stack(stack1);
-	print_stack(stack2);
-
-	push_a(stack1, stack2);
-	print_stack(stack1);
-	print_stack(stack2);
+	print_stack(stack_a);
+	print_stack(stack_b);
 
 	exit(EXIT_SUCCESS);
 }

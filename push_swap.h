@@ -1,5 +1,6 @@
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
+# include <errno.h>
 # include <limits.h>
 # include <stdbool.h>
 # include <stdio.h>
@@ -23,6 +24,9 @@ void			push_stack(t_stack *stack, int value);
 int				pop_stack(t_stack *stack);
 void			print_stack(t_stack *stack);
 t_stack_node	*stack_last(t_stack *stack);
+
+// stack_utils.c
+t_stack_node	*find_node(t_stack *stack, int key);
 
 // operation_base.c
 void			swap(t_stack *stack);
@@ -50,5 +54,11 @@ void			reverse_rotate_same(t_stack *stack_a, t_stack *stack_b);
 // ft_putstr_fd.c
 size_t			ft_strlen(const char *s);
 void			ft_putstr_fd(const char *s, int fd);
+
+// atoi_erange.c
+int				ft_atoi_erange(const char *nptr);
+
+// initializer.c
+void			setup_stack(int argc, char *argv[], t_stack *stack);
 
 #endif
