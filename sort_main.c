@@ -50,7 +50,6 @@ void	sort_less_equal_ten_elements(t_stack *stack_a, t_stack *stack_b)
 	int		min_value;
 	size_t	index;
 
-	// while (stack_a->size > 3 && !is_stack_sorted(stack_a))
 	while (stack_a->size > 3)
 	{
 		min_value = get_min_value_in_stack(stack_a);
