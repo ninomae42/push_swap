@@ -1,4 +1,5 @@
 checker_Mac
+checker
 a.out
 *.o
 *.a
@@ -6,3 +7,5 @@ a.out
 compile_commands.json
 push_swap
 .vscode
+push_swap_tester/
+*.log

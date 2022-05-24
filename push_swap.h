@@ -30,10 +30,12 @@ t_stack_node	*find_node(t_stack *stack, int key);
 
 
 // sort_main.c
-void	do_sort(t_stack *stack_a, t_stack *stack_b);
+void			do_sort(t_stack *stack_a, t_stack *stack_b);
 
 // sort_utils.c
 bool			is_stack_sorted(t_stack *stack);
+int				get_min_value_in_stack(t_stack *stack_a);
+size_t			get_index_of_key_value(t_stack *stack_a, int key);
 
 // operation_base.c
 void			swap(t_stack *stack);
